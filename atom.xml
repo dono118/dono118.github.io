@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-05-04T03:16:20.098Z</updated>
+  <updated>2021-05-04T03:46:26.580Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://dono118.github.io/2021/05/04/javascript-bian-liang-ti-sheng-he-han-shu-ti-sheng-yi-ji-ta-men-de-you-xian-ji/"/>
     <id>https://dono118.github.io/2021/05/04/javascript-bian-liang-ti-sheng-he-han-shu-ti-sheng-yi-ji-ta-men-de-you-xian-ji/</id>
     <published>2021-05-04T02:59:05.000Z</published>
-    <updated>2021-05-04T03:16:20.098Z</updated>
+    <updated>2021-05-04T03:46:26.580Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    <category term="前端" scheme="https://dono118.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
     
     <category term="JavaScript" scheme="https://dono118.github.io/tags/JavaScript/"/>
     
@@ -44,7 +46,7 @@
     <link href="https://dono118.github.io/2021/05/03/hello-world/"/>
     <id>https://dono118.github.io/2021/05/03/hello-world/</id>
     <published>2021-05-03T12:23:24.360Z</published>
-    <updated>2021-05-03T12:23:24.361Z</updated>
+    <updated>2021-05-04T03:46:21.806Z</updated>
     
     
       
@@ -57,6 +59,10 @@
     
     
     
+    <category term="blog" scheme="https://dono118.github.io/categories/blog/"/>
+    
+    
+    <category term="hexo" scheme="https://dono118.github.io/tags/hexo/"/>
     
   </entry>
   
