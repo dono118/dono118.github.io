@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-05-03T12:23:24.361Z</updated>
+  <updated>2021-05-04T03:03:15.642Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript 变量提升和函数提升，以及它们的优先级</title>
+    <link href="https://dono118.github.io/2021/05/04/javascript-bian-liang-ti-sheng-he-han-shu-ti-sheng-yi-ji-ta-men-de-you-xian-ji/"/>
+    <id>https://dono118.github.io/2021/05/04/javascript-bian-liang-ti-sheng-he-han-shu-ti-sheng-yi-ji-ta-men-de-you-xian-ji/</id>
+    <published>2021-05-04T02:59:05.000Z</published>
+    <updated>2021-05-04T03:03:15.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一、变量提升&quot;&gt;&lt;a href=&quot;#一、变量提升&quot; class=&quot;headerlink&quot; title=&quot;一、变量提升&quot;&gt;&lt;/a&gt;一、变量提升&lt;/h3&gt;&lt;p&gt;ES6</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://dono118.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
