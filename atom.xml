@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-05-04T03:46:26.580Z</updated>
+  <updated>2021-05-05T03:35:03.490Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue双向数据绑定原理</title>
+    <link href="https://dono118.github.io/2021/05/05/vue-shuang-xiang-shu-ju-bang-ding-yuan-li/"/>
+    <id>https://dono118.github.io/2021/05/05/vue-shuang-xiang-shu-ju-bang-ding-yuan-li/</id>
+    <published>2021-05-05T02:36:33.000Z</published>
+    <updated>2021-05-05T03:35:03.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Vue-双向数据绑定的原理&quot;&gt;&lt;a href=&quot;#Vue-双向数据绑定的原理&quot; class=&quot;headerlink&quot; title=&quot;Vue 双向数据绑定的原理&quot;&gt;&lt;/a&gt;Vue 双向数据绑定的原理&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;1.Vue</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://dono118.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue" scheme="https://dono118.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript 变量提升和函数提升，以及它们的优先级</title>
