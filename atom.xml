@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-05-05T03:35:03.490Z</updated>
+  <updated>2021-05-05T03:56:59.651Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://dono118.github.io/2021/05/05/vue-shuang-xiang-shu-ju-bang-ding-yuan-li/"/>
     <id>https://dono118.github.io/2021/05/05/vue-shuang-xiang-shu-ju-bang-ding-yuan-li/</id>
     <published>2021-05-05T02:36:33.000Z</published>
-    <updated>2021-05-05T03:35:03.490Z</updated>
+    <updated>2021-05-05T03:56:59.651Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;Vue-双向数据绑定的原理&quot;&gt;&lt;a href=&quot;#Vue-双向数据绑定的原理&quot; class=&quot;headerlink&quot; title=&quot;Vue 双向数据绑定的原理&quot;&gt;&lt;/a&gt;Vue 双向数据绑定的原理&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;1.Vue</summary>
+    <summary type="html">&lt;h3 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;Vue 采用数据劫持结合发布者-订阅者模式的方法，通过</summary>
         
       
     
