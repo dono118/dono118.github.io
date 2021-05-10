@@ -773,7 +773,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="2-2-useLayoutEffect"><a href="#2-2-useLayoutEffect" class="headerlink" title="2.2 useLayoutEffect"></a>2.2 useLayoutEffect</h3><p><code>useLayoutEffect(effect, array);</code></p>
+<h4 id="2-2-useLayoutEffect"><a href="#2-2-useLayoutEffect" class="headerlink" title="2.2 useLayoutEffect"></a>2.2 useLayoutEffect</h4><p><code>useLayoutEffect(effect, array);</code></p>
 <p>与 useEffect 使用方法一样，只是执行回调函数的时机有着略微区别，运行时机更像是 componentDidMount 和 componentDidUpdate。但是要注意的是，该方法是同步方法，在浏览器 paint 之前执行，会阻碍浏览器 paint，只有当我们需要进行 DOM 的操作时才使用该函数（比如设定 DOM 布局尺寸，这样可以防抖动）。</p>
 <p><strong>useEffect 与 useLayoutEffect:</strong></p>
 <p>正常情况用默认的 useEffect 钩子就够了，这可以保证状态变更不阻塞渲染过程，但如果 effect 更新（清理）中涉及 DOM 更新操作，用 useEffect 就会有意想不到的效果，这时我们最好使用 useLayoutEffect 。</p>
@@ -855,7 +855,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-2-useContext"><a href="#3-2-useContext" class="headerlink" title="3.2 useContext"></a>3.2 useContext</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> Context <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'light'</span><span class="token punctuation">)</span>
+<h4 id="3-2-useContext"><a href="#3-2-useContext" class="headerlink" title="3.2 useContext"></a>3.2 useContext</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> Context <span class="token operator">=</span> React<span class="token punctuation">.</span><span class="token function">createContext</span><span class="token punctuation">(</span><span class="token string">'light'</span><span class="token punctuation">)</span>
 
 <span class="token comment">// Provider</span>
 <span class="token keyword">class</span> <span class="token class-name">Provider</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
