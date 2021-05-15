@@ -575,7 +575,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3.4k
+                    3.5k
                 </div>
                 
 
@@ -604,7 +604,7 @@
 <li>Fragment，Teleport（Protal），Suspense：新增三个组件</li>
 <li>Better TypeScript support：更好的支持 TS</li>
 </ul>
-<h3 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h3><p>Vue3.0 在性能方面比 Vue2.x 快了 1.2 ～ 2 倍。</p>
+<h4 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h4><p>Vue3.0 在性能方面比 Vue2.x 快了 1.2 ～ 2 倍。</p>
 <ul>
 <li><p>重写虚拟 DOM 的实现</p>
 </li>
@@ -615,13 +615,13 @@
 <li><p>SSR 速度提高</p>
 </li>
 </ul>
-<h3 id="Three-shaking-support"><a href="#Three-shaking-support" class="headerlink" title="Three-shaking support"></a>Three-shaking support</h3><p>Vue3.x 中的核心 API 都支持 tree-shaking，这些 API 都是通过包引入的方式而不是直接在实例化时就注入，只会对使用到的功能或特性进行打包（按需打包），这意味着更多的功能和更小的体积。</p>
-<h3 id="Composition-API"><a href="#Composition-API" class="headerlink" title="Composition API"></a>Composition API</h3><p>Vue2.x 中，我们通常采用 mixin 来复用逻辑代码，使用起来虽然方便，但也存在一些问题：代码来源不清晰、方法属性可能出现冲突。因此，Vue3.x 引入了 Composition API（组合 API），使用纯函数分割复用代码。和 React Hooks 的概念相似。</p>
+<h4 id="Three-shaking-support"><a href="#Three-shaking-support" class="headerlink" title="Three-shaking support"></a>Three-shaking support</h4><p>Vue3.x 中的核心 API 都支持 tree-shaking，这些 API 都是通过包引入的方式而不是直接在实例化时就注入，只会对使用到的功能或特性进行打包（按需打包），这意味着更多的功能和更小的体积。</p>
+<h4 id="Composition-API"><a href="#Composition-API" class="headerlink" title="Composition API"></a>Composition API</h4><p>Vue2.x 中，我们通常采用 mixin 来复用逻辑代码，使用起来虽然方便，但也存在一些问题：代码来源不清晰、方法属性可能出现冲突。因此，Vue3.x 引入了 Composition API（组合 API），使用纯函数分割复用代码。和 React Hooks 的概念相似。</p>
 <ul>
 <li>更好的逻辑复用和代码组织</li>
 <li>更好的类型推导</li>
 </ul>
-<h3 id="Fragment、Teleport、Suspense"><a href="#Fragment、Teleport、Suspense" class="headerlink" title="Fragment、Teleport、Suspense"></a>Fragment、Teleport、Suspense</h3><p>新增三个组件。</p>
+<h4 id="Fragment、Teleport、Suspense"><a href="#Fragment、Teleport、Suspense" class="headerlink" title="Fragment、Teleport、Suspense"></a>Fragment、Teleport、Suspense</h4><p>新增三个组件。</p>
 <h4 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h4><p>在书写 Vue2.x 时，由于组件必须是一个根结点，很多时候会添加一些没有意义的节点用于包裹。Fragment 组件就是用于解决这个问题的（这和 React 中的 Fragment 组件是一样的）。</p>
 <h4 id="Teleport"><a href="#Teleport" class="headerlink" title="Teleport"></a>Teleport</h4><p>Teleport 其实就是 React 中的 Portal。Portal 提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案。</p>
 <blockquote>
@@ -631,8 +631,8 @@
 <blockquote>
 <p>Suspense 让你的组件在渲染之前进行“等待”，并在等待时显示 fallback 的内容。</p>
 </blockquote>
-<h3 id="Better-TypeScript-support"><a href="#Better-TypeScript-support" class="headerlink" title="Better TypeScript support"></a>Better TypeScript support</h3><p>Vue3.x 采用 TypeScript 重写，开发者使用 Vue3.x 时可以充分体验 TS 给编码带来的便利。</p>
-<h3 id="Custom-Renderer-API"><a href="#Custom-Renderer-API" class="headerlink" title="Custom Renderer API"></a>Custom Renderer API</h3><p>这个 API 定义了虚拟 DOM 的渲染规则，这意味着使用自定义 API 可以达到跨平台的目的。</p>
+<h4 id="Better-TypeScript-support"><a href="#Better-TypeScript-support" class="headerlink" title="Better TypeScript support"></a>Better TypeScript support</h4><p>Vue3.x 采用 TypeScript 重写，开发者使用 Vue3.x 时可以充分体验 TS 给编码带来的便利。</p>
+<h4 id="Custom-Renderer-API"><a href="#Custom-Renderer-API" class="headerlink" title="Custom Renderer API"></a>Custom Renderer API</h4><p>这个 API 定义了虚拟 DOM 的渲染规则，这意味着使用自定义 API 可以达到跨平台的目的。</p>
 <h3 id="生命周期的变化"><a href="#生命周期的变化" class="headerlink" title="生命周期的变化"></a>生命周期的变化</h3><ul>
 <li>Vue2 -&gt; Vue3</li>
 <li>beforeCreate -&gt; setup</li>
@@ -738,24 +738,24 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h3 id="TypeScript-的支持"><a href="#TypeScript-的支持" class="headerlink" title="TypeScript 的支持"></a>TypeScript 的支持</h3><p>Vue2 中使用的都是 Js，其本身并没有类型系统这个概念，现如今 TypeScript 异常火爆，对于规模很大的项目，没有类型声明，后期维护和代码的阅读都是头疼的事情，虽然 Vue2 实际上也是可以使用 TS 的，但是支持并不算特别完美，此外 Vue2 的源码也是使用 Facebook 的 Flow 做类型检查。<br>最终 Vue3 借鉴了 React Hook 实现了更自由的编程方式，提出了 Composition API，Composition API 不需要通过指定一长串选项来定义组件，而是允许用户像编写函数一样自由地表达、组合和重用有状态的组件逻辑，同时提供出色的 TypeScript 支持。</p>
 <h3 id="打包体积变化"><a href="#打包体积变化" class="headerlink" title="打包体积变化"></a>打包体积变化</h3><p>Vue2 官方说明运行时打包 23k，但这只是没安装依赖的时候，随着依赖包和框架特性的增多，有时候不必要的，未使用的代码文件都被打包了进去，所以后期项目大了，打包文件会特别多还很大。<br>在 Vue3 中，通过将大多数全局 API 和内部帮助程序移动到 JavaScript 的 module.exports 属性上实现这一点，这允许现代模式下的 module bundler 能够静态地分析模块依赖关系，并删除与未使用的 module.exports 属性相关的代码，模板编译器还生成了对 Tree Shaking 摇树优化友好的代码，只有在模板中实际使用某个特性时，该代码才导入该特性的帮助程序，尽管增加了许多新特性，但 Vue3 被压缩后的基线大小约为 10KB，不到 Vue2 的一半。</p>
 <h3 id="非兼容变更"><a href="#非兼容变更" class="headerlink" title="非兼容变更"></a>非兼容变更</h3><p>Vue3 相对于 Vue2 的非兼容的变更概括，详情可以查阅<a target="_blank" rel="noopener" href="https://v3.cn.vuejs.org/guide/migration/introduction.html%E3%80%82">https://v3.cn.vuejs.org/guide/migration/introduction.html。</a></p>
-<h3 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API#"></a>全局 API#</h3><ul>
+<h3 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API"></a>全局 API</h3><ul>
 <li>全局 Vue API 已更改为使用应用程序实例。</li>
 <li>全局和内部 API 已经被重构为可 tree-shakable。</li>
 </ul>
-<h3 id="模板指令"><a href="#模板指令" class="headerlink" title="模板指令#"></a>模板指令#</h3><ul>
+<h3 id="模板指令"><a href="#模板指令" class="headerlink" title="模板指令"></a>模板指令</h3><ul>
 <li>组件上 v-model 用法已更改，替换 v-bind.sync。</li>
-<li><template v-for="">和非 v-for 节点上 key 用法已更改。
+<li><code>&lt;template v-for&gt;</code>和非 v-for 节点上 key 用法已更改。</li>
 <li>在同一元素上使用的 v-if 和 v-for 优先级已更改。</li>
 <li>v-bind=”object”现在排序敏感。</li>
 <li>v-on:event.native 修饰符已移除。</li>
 <li>v-for 中的 ref 不再注册 ref 数组。</li>
-
+</ul>
 <h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><ul>
 <li>只能使用普通函数创建功能组件。</li>
-<li>functional 属性在 SFC 单文件组件<template>和 functional 组件选项被抛弃。
+<li>functional 属性在 SFC 单文件组件<code>&lt;template&gt;</code>和 functional 组件选项被抛弃。</li>
 <li>异步组件现在需要 defineAsyncComponent 方法来创建。</li>
 <li>组件事件现在需要在 emits 选项中声明。</li>
-
+</ul>
 <h3 id="渲染函数"><a href="#渲染函数" class="headerlink" title="渲染函数"></a>渲染函数</h3><ul>
 <li>渲染函数 API 改变。</li>
 <li>$scopedSlots property已删除，所有插槽都通过$slots 作为函数暴露。</li>
@@ -764,7 +764,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 <h3 id="自定义元素"><a href="#自定义元素" class="headerlink" title="自定义元素"></a>自定义元素</h3><ul>
 <li>自定义元素白名单现在已经在编译时执行。</li>
-<li>对特殊的 is prop 的使用只严格限制在被保留的<component>标记中。</component></li>
+<li>对特殊的 is prop 的使用只严格限制在被保留的<code>&lt;component&gt;</code>标记中。</li>
 </ul>
 <h3 id="其他小改变"><a href="#其他小改变" class="headerlink" title="其他小改变"></a>其他小改变</h3><ul>
 <li>destroyed 生命周期选项被重命名为 unmounted。</li>
@@ -775,11 +775,11 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li>来自 mixin 的 data 选项现在为浅合并。</li>
 <li>Attribute 强制策略已更改。</li>
 <li>一些过渡 class 被重命名。</li>
-<li><transitiongroup>不再默认渲染包裹元素。</transitiongroup></li>
+<li><code>&lt;TransitionGroup&gt;</code>不再默认渲染包裹元素。</li>
 <li>当侦听一个数组时，只有当数组被替换时，回调才会触发，如果需要在变更时触发，则需要指定 deep 选项。</li>
-<li>没有特殊指令的标记 v-if/else-if/else、v-for、v-slot 的<template>现在被视为普通元素，并将生成原生的<template>元素，而不是渲染其内部内容。
+<li>没有特殊指令的标记 v-if/else-if/else、v-for、v-slot 的<code>&lt;template&gt;</code>现在被视为普通元素，并将生成原生的<code>&lt;template&gt;</code>元素，而不是渲染其内部内容。</li>
 <li>在 Vue2 中，应用根容器的 outerHTML 将替换为根组件模板，如果根组件没有模板/渲染选项，则最终编译为模板，Vue3 现在使用应用容器的 innerHTML，这意味着容器本身不再被视为模板的一部分。</li>
-
+</ul>
 <h3 id="移除-API"><a href="#移除-API" class="headerlink" title="移除 API"></a>移除 API</h3><ul>
 <li>keyCode 支持作为 v-on 的修饰符。</li>
 <li>$on、$off 和$once 实例方法</li>
@@ -860,7 +860,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 </ul>
 </li>
 </ul>
-</template></template></li></ul></template></li></ul></template></li></ul>
+
                 
             </div>
             <hr/>
