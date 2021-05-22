@@ -605,16 +605,14 @@
 <p>Promise 表示的是一个计算结果或网络请求的占位符。由于当前计算或网络请求尚未完成，所以结果暂时无法取得。</p>
 <p>Promise 对象一共有 3 中状态，pending，fullfilled（又称为 resolved）和 rejected：</p>
 <ul>
-<li><p>pending——任务仍在进行中。</p>
-</li>
-<li><p>resolved——任务已完成。</p>
-</li>
-<li><p>reject——任务出错。<br>Promise 对象初始时处于 pending 状态，其生命周期内只可能发生以下一种状态转换：</p>
-</li>
-<li><p>任务完成，状态由 pending 转换为 resolved。</p>
-</li>
-<li><p>任务出错返回，状态由 pending 转换为 rejected。<br>Promise 对象的状态转换一旦发生，就不可再次更改。这或许就是 Promise 之“承诺”的含义吧。</p>
-</li>
+<li>pending——任务仍在进行中。</li>
+<li>resolved——任务已完成。</li>
+<li>reject——任务出错。</li>
+</ul>
+<p>Promise 对象初始时处于 pending 状态，其生命周期内只可能发生以下一种状态转换：</p>
+<ul>
+<li>任务完成，状态由 pending 转换为 resolved。</li>
+<li>任务出错返回，状态由 pending 转换为 rejected。<br>Promise 对象的状态转换一旦发生，就不可再次更改。这或许就是 Promise 之“承诺”的含义吧。</li>
 </ul>
 <h3 id="2-基本用法"><a href="#2-基本用法" class="headerlink" title="2.基本用法"></a>2.基本用法</h3><h4 id="2-1-创建-Promise"><a href="#2-1-创建-Promise" class="headerlink" title="2.1 创建 Promise"></a>2.1 创建 Promise</h4><p>Javascript 提供了 Promise 构造函数用于创建 Promise 对象。格式如下：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token function">executor</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -955,7 +953,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <p>getJSON 函数接受一个 url 地址，请求 json 数据。但是请求到的数据是文本格式，所以在第一个 then 方法的回调中使用 JSON.parse 将其转为对象，第二个 then 方法回调再进行具体处理。</p>
 <p><code>http://api.icndb.com/jokes/random</code> 是一个随机笑话的 api，大家可以试试 <span class="github-emoji"><span>😄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。</p>
-<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h3><p>Promise 是 ES6 新增的一种异步编程的解决方案，使用它可以编写更优雅，更易读，更易维护的程序。Promise 已经应用在各个角落了，个人认为掌握它是一个合格的 Javascript 开发者的基本功。</p>
+<h3 id="5-总结"><a href="#5-总结" class="headerlink" title="5.总结"></a>5.总结</h3><p>Promise 是 ES6 新增的一种异步编程的解决方案，Promise 可以认为是一个对象，从它可以获取异步操作的消息。Promise 提供统一的 API，各种异步操作都可以用同样的方法进行处理。使用它可以编写更优雅，更易读，更易维护的程序。</p>
 
                 
             </div>
