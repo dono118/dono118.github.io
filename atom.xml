@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-05-15T09:56:41.323Z</updated>
+  <updated>2021-05-22T03:17:21.375Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入理解Javascript之Promise</title>
+    <link href="https://dono118.github.io/2021/05/22/shen-ru-li-jie-javascript-zhi-promise/"/>
+    <id>https://dono118.github.io/2021/05/22/shen-ru-li-jie-javascript-zhi-promise/</id>
+    <published>2021-05-22T02:40:27.000Z</published>
+    <updated>2021-05-22T03:17:21.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.概述&quot;&gt;&lt;/a&gt;1.概述&lt;/h3&gt;&lt;p&gt;相信大家都听过 Node 中著名的回调地狱（callback hell)。因为 Node</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://dono118.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Javascript" scheme="https://dono118.github.io/tags/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue3.0新特性</title>
