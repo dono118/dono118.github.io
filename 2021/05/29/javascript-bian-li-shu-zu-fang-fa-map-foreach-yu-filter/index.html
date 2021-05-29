@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="books, Dono118">
+    <meta name="keywords" content="JavaScript遍历数组方法map、forEach与filter, Dono118">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>books | Dono118</title>
+    <title>JavaScript遍历数组方法map、forEach与filter | Dono118</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -420,12 +420,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">books</h1>
+                    <h1 class="description center-align post-title">JavaScript遍历数组方法map、forEach与filter</h1>
                 </div>
             </div>
         </div>
@@ -539,12 +539,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -553,7 +566,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-03
+                    2021-05-29
                 </div>
                 
 
@@ -562,7 +575,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    1.6k
                 </div>
                 
 
@@ -582,7 +595,170 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>共同点：</p>
+<blockquote>
+<p>1.都是循环遍历数组中的每一项。<br>2.forEach() 和 map() 里面每一次执行匿名函数都支持 3 个参数：数组中的当前项 item,当前项的索引 index,原始数组 input。 3.匿名函数中的 this 都是指 Window。 4.只能遍历数组</p>
+</blockquote>
+<h3 id="1-forEach"><a href="#1-forEach" class="headerlink" title="1.forEach()"></a>1.forEach()</h3><p>没有返回值</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">//原数组</span>
+arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//do something</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//demo</span>
+<span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> res <span class="token operator">=</span> ary<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index<span class="token punctuation">,</span> input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  input<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> item <span class="token operator">*</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token comment">//--&gt; undefined;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ary<span class="token punctuation">)</span> <span class="token comment">//--&gt; 通过数组索引改变了原数组；//120,230,240,420,10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参数：<br>1.value 数组中的当前项, index 当前项的索引, array 原始数组； 2.数组中有几项，那么传递进去的匿名回调函数就需要执行几次； 3.理论上这个方法是没有返回值的，仅仅是遍历数组中的每一项，不对原来数组进行修改；但是可以自己通过数组的索引来修改原来的数组；</p>
+</blockquote>
+<h3 id="2-map"><a href="#2-map" class="headerlink" title="2.map()"></a>2.map()</h3><p>有返回值，可以 return 出来</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">//原数组</span>
+arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//do something</span>
+  <span class="token keyword">return</span> <span class="token constant">XXX</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">//demo</span>
+<span class="token keyword">let</span> ary <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> res <span class="token operator">=</span> ary<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index<span class="token punctuation">,</span> input</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> item <span class="token operator">*</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token comment">//--&gt;[120,230,240,420,10];  原数组拷贝了一份，并进行了修改</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>ary<span class="token punctuation">)</span> <span class="token comment">//--&gt;[12,23,24,42,1]；  原数组并未发生变化</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参数：<br>1.value 数组中的当前项,index 当前项的索引,array 原始数组； 2.区别：map 的回调函数中支持 return 返回值；return 的是啥，相当于把数组中的这一项变为啥（并不影响原来的数组，只是相当于把原数组克隆一份，把克隆的这一份的数组中的对应项改变了）</p>
+</blockquote>
+<h3 id="3-filter"><a href="#3-filter" class="headerlink" title="3.filter()"></a>3.filter()</h3><p>有返回值</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> filteredArray <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>callback<span class="token punctuation">[</span>thisObject<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">//过滤掉小于 10 的数组元素：</span>
+
+<span class="token comment">//demo</span>
+<span class="token keyword">function</span> <span class="token function">isBigEnough</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> element <span class="token operator">&gt;=</span> <span class="token number">10</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> filtered <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">130</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>isBigEnough<span class="token punctuation">)</span>
+<span class="token comment">// 12, 130, 44</span>
+<span class="token comment">//结果：[12, 5, 8, 130, 44].filter(isBigEnough) ： 12, 130, 44</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>参数<br>1.callback： 要对每个数组元素执行的回调函数。<br>2.thisObject ： 在执行回调函数时定义的 this 对象。</p>
+</blockquote>
+<p>功能:<br>对数组中的每个元素都执行一次指定的函数（callback），并且创建一个新的数组，该数组元素是所有回调函数执行时返回值为 true 的原数组元素。它只对数组中的非空元素执行指定的函数，没有赋值或者已经删除的元素将被忽略，同时，新创建的数组也不会包含这些元素。</p>
+<p>回调函数可以有三个参数：当前元素，当前元素的索引和当前的数组对象。</p>
+<p>如参数 thisObject 被传递进来，它将被当做回调函数（callback）内部的 this 对象，如果没有传递或者为 null，那么将会使用全局对象。</p>
+<ul>
+<li>filter 不会改变原有数组，记住：只有在回调函数执行前传入的数组元素才有效，在回调函数开始执行后才添加的元素将被忽略，而在回调函数开始执行到最后一个元素这一期间，数组元素被删除或者被更改的，将以回调函数访问到该元素的时间为准，被删除的元素将被忽略。</li>
+</ul>
+<h3 id="4-map-filter"><a href="#4-map-filter" class="headerlink" title="4.map() + filter()"></a>4.map() + filter()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token keyword">let</span> newarr <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> res <span class="token operator">+</span> <span class="token number">2</span> <span class="token comment">//自定义</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">//newarr =&gt; [12,20,5,42,7]</span>
+<span class="token keyword">let</span> filterarr <span class="token operator">=</span> newarr<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">it</span> <span class="token operator">=&gt;</span> it <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">it</span> <span class="token operator">=&gt;</span> it<span class="token punctuation">)</span>
+<span class="token comment">//filterarr =&gt; [12,22,42]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="5-some"><a href="#5-some" class="headerlink" title="5.some()"></a>5.some()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//检查是否有数组元素大于等于10：</span>
+
+<span class="token keyword">function</span> <span class="token function">isBigEnough</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> element <span class="token operator">&gt;=</span> <span class="token number">10</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> passed <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>isBigEnough<span class="token punctuation">)</span>
+<span class="token comment">// passed is false</span>
+passed <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>isBigEnough<span class="token punctuation">)</span>
+<span class="token comment">// passed is true</span>
+<span class="token comment">//结果：</span>
+<span class="token comment">//[2, 5, 8, 1, 4].some(isBigEnough) ： false</span>
+<span class="token comment">//[12, 5, 8, 1, 4].some(isBigEnough) ： true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>对数组中的每个元素都执行一次指定的函数（callback），直到此函数返回 true，如果发现这个元素，some 将返回 true，如果回调函数对每个元素执行后都返回 false ，some 将返回 false。它只对数组中的非空元素执行指定的函数，没有赋值或者已经删除的元素将被忽略。</p>
+</blockquote>
+<h3 id="6-every"><a href="#6-every" class="headerlink" title="6.every()"></a>6.every()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//测试是否所有数组元素都大于等于10：</span>
+
+<span class="token keyword">function</span> <span class="token function">isBigEnough</span><span class="token punctuation">(</span><span class="token parameter">element<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> element <span class="token operator">&gt;=</span> <span class="token number">10</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> passed <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">130</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span>isBigEnough<span class="token punctuation">)</span>
+<span class="token comment">// passed is false</span>
+passed <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">54</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">130</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span>isBigEnough<span class="token punctuation">)</span>
+<span class="token comment">// passed is true</span>
+<span class="token comment">//结果：</span>
+<span class="token comment">//[12, 5, 8, 130, 44].every(isBigEnough) 返回 ： false</span>
+<span class="token comment">//[12, 54, 18, 130, 44].every(isBigEnough) 返回 ： true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>对数组中的每个元素都执行一次指定的函数（callback），直到此函数返回 false，如果发现这个元素，every 将返回 false，如果回调函数对每个元素执行后都返回 true ，every 将返回 true。它只对数组中的非空元素执行指定的函数，没有赋值或者已经删除的元素将被忽略</p>
+</blockquote>
+<h3 id="7-lastIndexOf"><a href="#7-lastIndexOf" class="headerlink" title="7.lastIndexOf()"></a>7.lastIndexOf()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//查找符合条件的元素：</span>
+<span class="token comment">//语法</span>
+<span class="token keyword">var</span> index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span>searchElement<span class="token punctuation">[</span><span class="token punctuation">,</span> fromIndex<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// index is 3</span>
+index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// index is -1</span>
+index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// index is 3</span>
+index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// index is 0</span>
+index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// index is 0</span>
+index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">lastIndexOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// index is 3</span>
+<span class="token comment">//结果：</span>
+<span class="token comment">//[2, 5, 9, 2].lastIndexOf(2) ： 3</span>
+<span class="token comment">//[2, 5, 9, 2].lastIndexOf(7) ： -1</span>
+<span class="token comment">//[2, 5, 9, 2].lastIndexOf(2, 3) ： 3</span>
+<span class="token comment">//[2, 5, 9, 2].lastIndexOf(2, 2) ： 0</span>
+<span class="token comment">//[2, 5, 9, 2].lastIndexOf(2, -2) ： 0</span>
+<span class="token comment">//[2, 5, 9, 2].lastIndexOf(2, -1) ： 3</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>当有元素符合条件时，返回当前元素的索引。如果没有发现，就直接返回 -1 。<br>searchElement： 要搜索的元素<br>fromIndex ： 开始搜索的位置，默认为数组的长度（length），在这样的情况下，将搜索所有的数组元素。搜索是反方向进行的</p>
+</blockquote>
+<h3 id="8-indexOf"><a href="#8-indexOf" class="headerlink" title="8.indexOf()"></a>8.indexOf()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//查找符合条件的元素：</span>
+
+<span class="token keyword">var</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment">// index is 0</span>
+index <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span>
+<span class="token comment">// index is -1</span>
+<span class="token comment">//结果：</span>
+<span class="token comment">//[2, 5, 9].indexOf(2) ： 0</span>
+<span class="token comment">//[2, 5, 9].indexOf(7) ： -1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>功能与 lastIndexOf()一样，搜索是正向进行的</p>
+</blockquote>
+<h3 id="9-match"><a href="#9-match" class="headerlink" title="9.match()"></a>9.match()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'The rain in SPAIN stays mainly in the plain'</span>
+<span class="token keyword">var</span> n <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">ain</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span>
+<span class="token comment">//在字符串中查找 "ain":</span>
+<span class="token comment">// n=&gt; ain,ain,ain</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>字符串模式匹配法</p>
+</blockquote>
+<h3 id="10-replace"><a href="#10-replace" class="headerlink" title="10.replace()"></a>10.replace()</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string">'Visit Microsoft! Visit Microsoft!'</span>
+<span class="token keyword">var</span> n <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'Microsoft'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">)</span>
+<span class="token comment">//n=&gt; Visit Runoob!Visit Microsoft!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>我们将执行一次替换，当第一个 “Microsoft” 被找到（匹配），它就被替换为 “Runoob”</p>
+</blockquote>
+<h3 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">dedupe</span><span class="token punctuation">(</span><span class="token parameter">array</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">dedupe</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
@@ -608,7 +784,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dono118.github.io/books/index.html">https://dono118.github.io/books/index.html</a>
+                    <a href="https://dono118.github.io/2021/05/29/javascript-bian-li-shu-zu-fang-fa-map-foreach-yu-filter/">https://dono118.github.io/2021/05/29/javascript-bian-li-shu-zu-fang-fa-map-foreach-yu-filter/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -645,7 +821,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -820,13 +1000,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/books/index.html">
+                <a href="/2021/05/29/javascript-bian-li-shu-zu-fang-fa-map-foreach-yu-filter/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="JavaScript遍历数组方法map、forEach与filter">
                         
-                        <span class="card-title">books</span>
+                        <span class="card-title">JavaScript遍历数组方法map、forEach与filter</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -837,17 +1017,29 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-29
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Eric
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -855,16 +1047,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/books/index.html">
+                <a href="/2021/05/22/shen-ru-li-jie-javascript-zhi-promise/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="深入理解Javascript之Promise">
                         
-                        <span class="card-title">books</span>
+                        <span class="card-title">深入理解Javascript之Promise</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,17 +1067,28 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Eric
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Javascript/">
+                        <span class="chip bg-color">Javascript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
