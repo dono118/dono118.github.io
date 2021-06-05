@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-06-05T07:55:26.226Z</updated>
+  <updated>2021-06-05T10:24:09.161Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS中的Blob对象</title>
+    <link href="https://dono118.github.io/2021/06/05/js-zhong-de-blob-dui-xiang/"/>
+    <id>https://dono118.github.io/2021/06/05/js-zhong-de-blob-dui-xiang/</id>
+    <published>2021-06-05T08:00:18.000Z</published>
+    <updated>2021-06-05T10:24:09.161Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在一般的 Web 开发中，很少会用到 Blob，但 Blob 可以满足一些场景下的特殊需求。Blob，Binary Large Object 的缩写，代表二进制类型的大对象。Blob 的概念在一些数据库中有使用到，例如，MYSQL 中的 BLOB</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://dono118.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Javascript" scheme="https://dono118.github.io/tags/Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript遍历数组方法map、forEach与filter</title>
