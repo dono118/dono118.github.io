@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="books, Dono118">
+    <meta name="keywords" content="umy-ui解决上万条数据全选卡顿问题, Dono118">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>books | Dono118</title>
+    <title>umy-ui解决上万条数据全选卡顿问题 | Dono118</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -420,12 +420,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">books</h1>
+                    <h1 class="description center-align post-title">umy-ui解决上万条数据全选卡顿问题</h1>
                 </div>
             </div>
         </div>
@@ -539,12 +539,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/UI%E5%BA%93/">
+                                <span class="chip bg-color">UI库</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -553,7 +566,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-03
+                    2021-06-26
                 </div>
                 
 
@@ -562,7 +575,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    489
                 </div>
                 
 
@@ -582,7 +595,156 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install umy<span class="token operator">-</span>ui
+yarn add umy<span class="token operator">-</span>ui<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><h4 id="完整引入"><a href="#完整引入" class="headerlink" title="完整引入"></a>完整引入</h4><p>在 <code>main.js</code> 中添加引入代码</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> UmyUi <span class="token keyword">from</span> <span class="token string">"umy-ui"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"umy-ui/lib/theme-chalk/index.css"</span><span class="token punctuation">;</span> <span class="token comment">// 引入样式</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>UmyUi<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="按需引入"><a href="#按需引入" class="headerlink" title="按需引入"></a>按需引入</h4><p>最好使用按需引入，借助 <code>babel-plugin-component</code>，以达到减小项目体积的目的。</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install babel<span class="token operator">-</span>plugin<span class="token operator">-</span>component<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在 <code>babel.config.js</code> 中进行设置</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  presets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"@vue/app"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">"component"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        libraryName<span class="token operator">:</span> <span class="token string">"umy-ui"</span><span class="token punctuation">,</span>
+        styleLibraryName<span class="token operator">:</span> <span class="token string">"theme-chalk"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">"umy-ui"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在 <code>main.js</code> 中添加按需引入代码</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> UTable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"umy-ui"</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>UTable<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>u<span class="token operator">-</span>table
+    <span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">"tableData"</span>
+    <span class="token operator">:</span>border<span class="token operator">=</span><span class="token string">"false"</span>
+    style<span class="token operator">=</span><span class="token string">"width: 100%"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>template slot<span class="token operator">=</span><span class="token string">"empty"</span><span class="token operator">&gt;</span>
+          没有查询到符合条件的记录
+     <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>u<span class="token operator">-</span>table<span class="token operator">-</span>column
+      prop<span class="token operator">=</span><span class="token string">"name"</span>
+      label<span class="token operator">=</span><span class="token string">"名字"</span>
+      width<span class="token operator">=</span><span class="token string">"180"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>u<span class="token operator">-</span>table<span class="token operator">-</span>column
+      prop<span class="token operator">=</span><span class="token string">"sex"</span>
+      label<span class="token operator">=</span><span class="token string">"性别"</span>
+      width<span class="token operator">=</span><span class="token string">"180"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>u<span class="token operator">-</span>table<span class="token operator">-</span>column
+      prop<span class="token operator">=</span><span class="token string">"age"</span>
+      label<span class="token operator">=</span><span class="token string">"年龄"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token operator">=</span><span class="token string">"scope"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>el<span class="token operator">-</span>select v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"scope.row.sex"</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>el<span class="token operator">-</span>option v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">"item in sexList"</span> <span class="token operator">:</span>key<span class="token operator">=</span><span class="token string">"item.value"</span> <span class="token operator">:</span>label<span class="token operator">=</span><span class="token string">"item.label"</span> <span class="token operator">:</span>value<span class="token operator">=</span><span class="token string">"item.value"</span><span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>option<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>select<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">-</span>table<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        sexList<span class="token operator">:</span> <span class="token punctuation">[</span>
+           <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>label<span class="token operator">:</span> <span class="token string">'男'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>label<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>label<span class="token operator">:</span> <span class="token string">'未知'</span><span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        tableData<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小虎'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小明'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小丽'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'未知'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小狗'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>甚至你还能这样做，都是兼容的<br>使用 element-ui 中的 table 组件，在外层用 u-table 包裹起来就行了</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>u<span class="token operator">-</span>table
+    <span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">"tableData"</span>
+    <span class="token operator">:</span>border<span class="token operator">=</span><span class="token string">"false"</span>
+    <span class="token operator">:</span>max<span class="token operator">-</span>height<span class="token operator">=</span><span class="token string">"tableHeight"</span>
+    use<span class="token operator">-</span>virtual
+    @selection<span class="token operator">-</span>change<span class="token operator">=</span><span class="token string">"handleSelectionChange"</span>
+  <span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column
+      align<span class="token operator">=</span><span class="token string">"center"</span>
+      type<span class="token operator">=</span><span class="token string">"selection"</span>
+      width<span class="token operator">=</span><span class="token string">"55"</span>
+    <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column
+      label<span class="token operator">=</span><span class="token string">"单位简称"</span>
+      prop<span class="token operator">=</span><span class="token string">"nameSimplify"</span>
+    <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column
+      label<span class="token operator">=</span><span class="token string">"级别"</span>
+      prop<span class="token operator">=</span><span class="token string">"levelCN"</span>
+    <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>u<span class="token operator">-</span>table<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        sexList<span class="token operator">:</span> <span class="token punctuation">[</span>
+           <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>label<span class="token operator">:</span> <span class="token string">'男'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>label<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+           <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>label<span class="token operator">:</span> <span class="token string">'未知'</span><span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        tableData<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'男'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小虎'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小明'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'女'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小丽'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+          sex<span class="token operator">:</span> <span class="token string">'未知'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'王小狗'</span><span class="token punctuation">,</span>
+          age<span class="token operator">:</span> <span class="token string">'15'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
@@ -608,7 +770,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dono118.github.io/books/index.html">https://dono118.github.io/books/index.html</a>
+                    <a href="https://dono118.github.io/2021/06/26/umy-ui-jie-jue-shang-wan-tiao-shu-ju-quan-xuan-qia-dun-wen-ti/">https://dono118.github.io/2021/06/26/umy-ui-jie-jue-shang-wan-tiao-shu-ju-quan-xuan-qia-dun-wen-ti/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -645,7 +807,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/UI%E5%BA%93/">
+                                    <span class="chip bg-color">UI库</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -820,13 +986,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/books/index.html">
+                <a href="/2021/06/26/umy-ui-jie-jue-shang-wan-tiao-shu-ju-quan-xuan-qia-dun-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="umy-ui解决上万条数据全选卡顿问题">
                         
-                        <span class="card-title">books</span>
+                        <span class="card-title">umy-ui解决上万条数据全选卡顿问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -837,17 +1003,29 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-26
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Eric
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/UI%E5%BA%93/">
+                        <span class="chip bg-color">UI库</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -855,16 +1033,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/books/index.html">
+                <a href="/2021/06/05/js-zhong-de-blob-dui-xiang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="books">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="JS中的Blob对象">
                         
-                        <span class="card-title">books</span>
+                        <span class="card-title">JS中的Blob对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,17 +1053,28 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Eric
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Javascript/">
+                        <span class="chip bg-color">Javascript</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
