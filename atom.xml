@@ -6,7 +6,7 @@
   <link href="https://dono118.github.io/atom.xml" rel="self"/>
   
   <link href="https://dono118.github.io/"/>
-  <updated>2021-06-26T02:08:23.062Z</updated>
+  <updated>2021-07-31T14:16:37.178Z</updated>
   <id>https://dono118.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Service Worker离线缓存</title>
+    <link href="https://dono118.github.io/2021/07/31/service-worker-chi-xian-huan-cun/"/>
+    <id>https://dono118.github.io/2021/07/31/service-worker-chi-xian-huan-cun/</id>
+    <published>2021-07-31T13:48:30.000Z</published>
+    <updated>2021-07-31T14:16:37.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一-service-worker-介绍&quot;&gt;&lt;a href=&quot;#一-service-worker-介绍&quot; class=&quot;headerlink&quot; title=&quot;一. service worker 介绍&quot;&gt;&lt;/a&gt;一. service worker</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="https://dono118.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="PWA" scheme="https://dono118.github.io/tags/PWA/"/>
+    
+  </entry>
   
   <entry>
     <title>umy-ui解决上万条数据全选卡顿问题</title>
